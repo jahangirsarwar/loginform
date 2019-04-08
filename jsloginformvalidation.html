@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!--jquery liberary-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- popper Js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<!-- Latest compiled Javascript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
+</head>
+<body>
+	<div class="container"><br>
+		<h1 class="text-success text-center"> Register Account</h1><br>
+		<div class="col-lg-8  m-auto d-block">
+			<form action="#" onsubmit="return validation()" class="bg-light">
+				<div class="form-group">
+					<label> Username: </label>
+					<input type="text" name="User" class="form-control" id="User">
+					<span id="username" class="text-danger font-weight-bold"></span>
+				</div>
+				<div class="form-group">
+					<label> Password: </label>
+					<input type="text" name="Pass" class="form-control" id="Pass">
+					<span id="passwords" class="text-danger font-weight-bold"></span>
+				</div>
+				<input type="Submit" name="Submit"onclick="validation()" value="Submits" class="btn btn-success" id="Submitbtn">
+
+
+
+
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function validation(){
+			var User = document.getElementById('User').value
+			var Pass = document.getElementById('Pass').value
+			var btn = document.getElementById('Submitbtn').value
+             
+                       
+
+			if (User == "" || User.length <= 2 || User.length > 20) {
+				document.getElementById('username').innerHTML="**Invalid Username";
+				return false;
+			}
+            
+		}
+	</script>
+
+</body>
+</html>
